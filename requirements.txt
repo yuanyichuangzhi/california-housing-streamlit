@@ -1,0 +1,6 @@
+numpy
+pandas
+streamlit
+streamlit_folium
+folium
+git+https://github.com/sharabhshukla/california-housing-price-prediction.git
