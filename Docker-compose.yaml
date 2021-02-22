@@ -23,7 +23,7 @@ services:
 
 # Add the webapp service
   webapp:
-    image: "docker.pkg.github.com/sharabhshukla/california-housing-streamlit/housing-app:0.1"
+    image: "docker.pkg.github.com/sharabhshukla/california-housing-streamlit/housing-app:slimstreach"
     container_name: "webapp"
     labels:
       - "traefik.enable=true"
