@@ -27,9 +27,11 @@ services:
     container_name: "webapp"
     labels:
       - "traefik.enable=true"
+      # For deployment replae the host with the domain name of the server
       - "traefik.http.routers.webapp.rule=Host(`webapp.localhost`)"
       - "traefik.http.routers.webapp.entrypoints=websecure"
       - "traefik.http.routers.webapp.tls.certresolver=myresolver"
       # Adding basic auth here
       - "traefik.http.routers.webapp.middlewares=test-auth"
       - "traefik.http.middlewares.test-auth.basicauth.users=traefik:$$apr1$$Ckdm4cE/$$FTld4EZe/nIfzX4rqki3Y."
+      - "traefik.http.middlewares.test-auth.basicauth.users=Sharabh:$$2y$$05$$mQFweNm3dZJYeSuqAT5Dre4Vt8jvr1AI6UGWuKGh88g6GyvSi/j5O"
