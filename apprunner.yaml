@@ -5,6 +5,7 @@ build:
     pre-build:
       - apt-get install git
     build:
+      - apt-get install git
       - pip install -r requirements.txt
 run: 
   command: streamlit run main.py --server.address=0.0.0.0 --server.port=8080
