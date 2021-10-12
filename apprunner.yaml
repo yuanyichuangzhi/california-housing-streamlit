@@ -1,0 +1,10 @@
+version: 1.0
+runtime: python3 
+build:
+  commands:
+    pre-build:
+      - apt-get install git
+    build:
+      - pip install -r requirements.txt
+run: 
+  command: streamlit run main.py --server.address=0.0.0.0 --server.port=8080
