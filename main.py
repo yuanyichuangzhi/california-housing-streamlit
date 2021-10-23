@@ -29,7 +29,7 @@ price_estimate_bool = st.button('Estimate price')
 if price_estimate_bool:
     with st.spinner("Calculating the best price for the house"):
         predicted_price = model.price_prediction(*house_features)
-        time.sleep(1.5)
+        time.sleep(1.0)
     st.header('The house is probably worth near about {}'.format(float(predicted_price[0])))
 
 
